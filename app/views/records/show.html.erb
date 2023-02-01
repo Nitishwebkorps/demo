@@ -1,0 +1,29 @@
+
+
+<h1 style="text-align:center;color:white;background-color:red"> Personal Detail Detail</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-9"><h2 style="text-align:left;color:blue"> Information</h2></div><hr>
+    
+    
+    
+    <div class="col-6 ">
+    <br><h2 >Name :- <%= @record.name %></h2>
+    
+    <br><h2 >Date Of Birth :- <%= @record.age %></h2>
+    
+    <br><h2 >Address :- <%= @record.address %></h2>
+    <br><h2 >Created Time :- <%= @record.created_at %></h2>
+
+    
+    
+    
+    </div>
+    </div>
+    
+  </div>
+
+  <%= link_to 'Edit Profile', edit_record_path(@record), class: "btn btn-warning" %>
+  
+  

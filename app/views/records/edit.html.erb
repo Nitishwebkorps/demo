@@ -1,0 +1,28 @@
+
+<h1 style="text-align:center;color:white;background-color:red">Edit Record Detail</h1>
+
+<%= form_with model: @record do |f| %>
+  <div class="container-sm">
+    
+  
+    <div class="row mb-3 mt-5">
+    
+      <strong><%= f.label :enter_name %></strong>
+      <%= f.text_field :name, placeholder: "Enter Author Name", autofocus: true %>
+    
+    </div>
+
+    <div class="row mb-3">
+      <strong><%= f.label :address %></strong>
+      <%= f.text_field :address, placeholder: "Enter about Author", autofocus: true %>
+    
+    </div>
+
+    
+
+  <%= f.submit "submit" %>
+  </div>
+
+  
+  
+<%end%>

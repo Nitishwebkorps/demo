@@ -1,0 +1,37 @@
+
+<h1 style="text-align:center;color:white;background-color:red">All Record Detail</h1>
+
+<%= render 'records/search' %>
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Serial Number</th>
+      <th scope="col">Name</th>
+      
+      <th scope="col">Date Of Birth</th>
+      <th scope="col">Address</th>
+      <th scope="col">Action</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  <% @records.each do |record| %>
+    <tr>
+      <th scope="row"><%= record.id %></th>
+      <td><%= record.name %></td>
+      
+      <td><%= record.age %></td>
+      <td><%= record.address %></td>
+     
+      
+      <td><%= link_to 'More info', record_path(record) %></td>
+      
+       
+    </tr>
+    <% end %>
+    
+  </tbody>
+</table>

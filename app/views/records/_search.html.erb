@@ -1,0 +1,18 @@
+<%= search_form_for @q, url: :records do |form| %>
+  <div class="form-group" >
+    <strong><%= form.label :search_by_Name %></strong>
+    <%= form.search_field :name_cont %>
+  </div>
+  <div class="form-group mt-3" >
+    <strong><%= form.label :search_By_id_number %></strong>
+    <%= form.search_field :id_eq %>
+  </div>
+  <div class="form-group mt-3" >
+    <strong><%= form.label :search_By_address %></strong>
+    <%= form.search_field :address_cont %>
+  </div>
+  <div class="form-group mt-3">
+    <%= form.submit 'search record', class: "btn btn-primary btn-lg" %>
+    
+  </div>
+<% end %>
